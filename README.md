@@ -5,6 +5,10 @@
 In NextJs a page will only be rendered when everything in `getInitialProps` is loaded.
 This hook will allow you to directly render and show a loader while the data is being loaded. Once the data is loaded the page will re-render and show the data.
 
+## How to install
+
+`npm install @enrise/usepromiseloader`
+
 ## How to use
 
 ```tsx

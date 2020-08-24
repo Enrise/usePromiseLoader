@@ -1,6 +1,6 @@
 {
   "name": "@enrise/usepromiseloader",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A react hook for nextjs that enables you to show a loader when data is fetched with getInitialProps in SPA mode",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

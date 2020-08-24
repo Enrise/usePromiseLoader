@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const usePromiseLoader = <DataType>(
   dataFromProp: DataType | Promise<DataType>,
@@ -12,14 +12,23 @@ const usePromiseLoader = <DataType>(
     dataFromProp instanceof Promise ? true : false
   );
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [error, setError] = useState<any>();
+
   useEffect(() => {
     if (dataFromProp instanceof Promise) {
-      dataFromProp.then((data) => {
-        setData(data);
-        setLoading(false);
-      });
+      dataFromProp
+        .then((data) => {
+          setData(data);
+          setLoading(false);
+        })
+        .catch((error) => setError(error));
     }
   }, []);
+
+  if (error) {
+    throw error;
+  }
 
   return [data, loading];
 };

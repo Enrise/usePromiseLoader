@@ -25,6 +25,24 @@ describe("usePromiseLoader()", () => {
     });
   });
 
+  describe("When the data is a promise and is rejected", () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let reject: (error?: any) => void;
+    const promise = new Promise<string>((internalResolve, internalReject) => {
+      reject = internalReject;
+    });
+
+    const hook = initHook(() => usePromiseLoader(promise, "default"));
+
+    it("It will throw the error", async () => {
+      reject("error");
+      await hook.wait();
+      expect(() => {
+        hook.run();
+      }).toThrowError("error");
+    });
+  });
+
   describe("When the data is not a promise", () => {
     const hook = initHook(() => usePromiseLoader("preLoaded", "default"));
 

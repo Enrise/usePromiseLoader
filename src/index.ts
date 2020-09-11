@@ -23,8 +23,11 @@ const usePromiseLoader = <DataType>(
           setLoading(false);
         })
         .catch((error) => setError(error));
+      return;
     }
-  }, []);
+    setData(data);
+    setLoading(false);
+  }, [dataFromProp]);
 
   if (error) {
     throw error;

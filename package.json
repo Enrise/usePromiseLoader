@@ -1,6 +1,6 @@
 {
   "name": "@enrise/usepromiseloader",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A react hook for nextjs that enables you to show a loader when data is fetched with getInitialProps in SPA mode",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -26,18 +26,18 @@
   },
   "homepage": "https://github.com/Enrise/usePromiseLoader#readme",
   "devDependencies": {
-    "@types/jest": "^25.2.1",
-    "@types/react": "^16.9.34",
-    "@typescript-eslint/eslint-plugin": "^2.28.0",
-    "@typescript-eslint/parser": "^2.28.0",
+    "@types/jest": "^25.2.3",
+    "@types/react": "^16.9.49",
+    "@typescript-eslint/eslint-plugin": "^4.0.2",
+    "@typescript-eslint/parser": "^4.0.2",
     "eslint": "^6.8.0",
-    "jest": "^25.3.0",
-    "jooks": "^1.0.0",
-    "prettier": "^2.0.4",
-    "prettier-eslint": "^9.0.1",
+    "jest": "^26.3.0",
+    "jooks": "^1.1.1",
+    "prettier": "^2.1.1",
+    "prettier-eslint": "^9.0.2",
     "react": "^16.13.1",
-    "ts-jest": "^25.3.1",
-    "typescript": "^3.8.3"
+    "ts-jest": "^26.3.0",
+    "typescript": "^4.0.2"
   },
   "peerDependencies": {
     "react": "^16.13.1"

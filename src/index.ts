@@ -25,7 +25,7 @@ const usePromiseLoader = <DataType>(
         .catch((error) => setError(error));
       return;
     }
-    setData(data);
+    setData(dataFromProp);
     setLoading(false);
   }, [dataFromProp]);
 
